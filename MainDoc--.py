@@ -2,15 +2,19 @@ from tkinter import *
 
 app = Tk()
 
+# Code what the 'B' button does
 def bolding():
     pass
 
+# Code what the 'I' button does
 def italicising():
     pass
 
+# Code what the 'Complete Sentence' button does (using Gemini)
 def compSent():
     pass
 
+# Code what the 'Complete Paragraph' button does (using Gemini)
 def compPara():
     pass
 
