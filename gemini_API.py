@@ -1,51 +1,27 @@
 import os
 from google import genai
-from dotenv import load_dotenv, find_dotenv
+from dotenv import load_dotenv
+
 
 #DONT TOUCH THIS
 load_dotenv()
 client = genai.Client()
 
+"""
+def completer(prompt):
+    response=client.models.generate_content(
+        model="gemini-2.5-flash",
+        contents=prompt
+    )
+    print(response.text)"""
 
-response=client.models.generate_content_stream(
-    model="gemini-2.5-flash",
-    contents=""
-)
 
-def senFin():
+def completer(prompt):
     Nchat=client.chats.create(model="gemini-2.5-flash")
-    while True:
-        msg = input("")
-        if msg=="stop":
-            break
-
-        res= Nchat.send_message(msg) 
-        print(res.text)
-
-senFin()
-
-import os
-from google import genai
-from dotenv import load_dotenv, find_dotenv
-
-#DONT TOUCH THIS
-load_dotenv()
-client = genai.Client()
+    res= Nchat.send_message(prompt) 
+    return res.text
 
 
-response=client.models.generate_content_stream(
-    model="gemini-2.5-flash",
-    contents=""
-)
-
-def senFin():
-    Nchat=client.chats.create(model="gemini-2.5-flash")
-    while True:
-        msg = input("")
-        if msg=="stop":
-            break
-
-        res= Nchat.send_message(msg) 
-        print(res.text)
-
-senFin()
+if __name__ == "__main__":
+    test = completer("Say hello")
+    print(test)
