@@ -14,7 +14,6 @@ def bolding():
     my_text.tag_configure("bold", font=boldfont)
     #if statement to see if tag has been set
     current_tags = my_text.tag_names("sel.first")
-
     if "bold" in current_tags:
         my_text.tag_remove("bold", "sel.first", "sel.last")
     else:
@@ -43,7 +42,7 @@ def compPara():
     pass
 
 app.title("Doc-- Simple AI-Powered Document Editor")
-app.geometry('700x450')
+app.geometry('700x500')
 
 button_frame = ttk.Frame(app)
 button_frame.pack()
@@ -54,7 +53,9 @@ bold_button.grid(row=0, column = 0, padx=5)
 italic_button = ttk.Button(button_frame, text=' I ', command=italicising)
 italic_button.grid(row=0, column = 1)
 
-my_text = tkinter.Text(app, width=85, height=20)
+base_font = font.Font(family="Courier New", size=12)
+
+my_text = tkinter.Text(app, width=85, height=20, font=base_font)
 my_text.pack(pady=20)
 
 button_frame2 = ttk.Frame(app)
