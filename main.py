@@ -1,10 +1,15 @@
 import tkinter
+<<<<<<< HEAD
+=======
 from tkinter import font
+>>>>>>> 45ef13ed95329fd4989cd980075d394bdcb0c067
 from tkinter import ttk
 import sv_ttk
 from gemini_API import completer
 
 app = tkinter.Tk()
+<<<<<<< HEAD
+=======
 current_size = 12
 def apply_style_tags(start, end):
     # Check what styles are currently ON at the start of selection
@@ -17,6 +22,7 @@ def apply_style_tags(start, end):
 
     if bold_on and italic_on:
         my_text.tag_add("bold_italic", start, end)
+>>>>>>> 45ef13ed95329fd4989cd980075d394bdcb0c067
 
 # Code what the 'B' button does
 def bolding():
@@ -144,6 +150,26 @@ app.geometry('700x600')
 button_frame = ttk.Frame(app)
 button_frame.pack()
 
+<<<<<<< HEAD
+bold_button = ttk.Button(button_frame, text="B")
+bold_button.grid(row=0, column = 0, padx=5)
+
+italic_button = ttk.Button(button_frame, text=' I ')
+italic_button.grid(row=0, column = 1)
+
+my_text = tkinter.Text(app, width=85, height=20)
+my_text.pack(pady=20)
+
+button_frame2 = ttk.Frame(app)
+button_frame2.pack()
+
+cs_button = ttk.Button(button_frame2, text="Complete Sentence")
+cs_button.grid(row=0, column = 0)
+
+cpara_button = ttk.Button(button_frame2, text="Complete Paragraph")
+cpara_button.grid(row=0, column = 1, padx=5)
+
+=======
 bold_button = ttk.Button(button_frame, text="B", command=bolding)
 bold_button.grid(row=0, column = 0, padx=5)
 
@@ -192,6 +218,7 @@ re_button.pack(anchor='e')
 cpara_button = ttk.Button(button_frame2, text="Complete Paragraph", command=compPara)
 cpara_button.grid(row=0, column = 1, padx=5)
 
+>>>>>>> 45ef13ed95329fd4989cd980075d394bdcb0c067
 sv_ttk.set_theme("dark")
 
 app.mainloop()
