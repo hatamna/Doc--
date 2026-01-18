@@ -94,7 +94,7 @@ def compPara():
     pass
 
 app.title("Doc-- Simple AI-Powered Document Editor")
-app.geometry('700x550')
+app.geometry('700x570')
 
 button_frame = ttk.Frame(app)
 button_frame.pack()
@@ -104,6 +104,9 @@ bold_button.grid(row=0, column = 0, padx=5)
 
 italic_button = ttk.Button(button_frame, text=' I ', command=italicising)
 italic_button.grid(row=0, column = 1)
+
+score_text = ttk.Label(text= "Writing Score: ")
+score_text.pack(anchor="e")
 
 base_font = font.Font(family="Courier New",size=current_size )
 
