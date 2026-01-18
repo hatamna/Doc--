@@ -1,16 +1,16 @@
 import os
 from google import genai
-from dotenv import load_dotenv
+from dotenv import load_dotenv, find_dotenv
 
 #DONT TOUCH THIS
 load_dotenv()
 client = genai.Client()
 
+
 response=client.models.generate_content_stream(
     model="gemini-2.5-flash",
-    contents="say beep at the start of every sentence"
+    contents=""
 )
-
 
 def senFin():
     Nchat=client.chats.create(model="gemini-2.5-flash")
