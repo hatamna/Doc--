@@ -94,7 +94,7 @@ def compPara():
     pass
 
 app.title("Doc-- Simple AI-Powered Document Editor")
-app.geometry('700x570')
+app.geometry('700x600')
 
 button_frame = ttk.Frame(app)
 button_frame.pack()
