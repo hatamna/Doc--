@@ -94,7 +94,7 @@ def compPara():
     pass
 
 app.title("Doc-- Simple AI-Powered Document Editor")
-app.geometry('700x500')
+app.geometry('700x550')
 
 button_frame = ttk.Frame(app)
 button_frame.pack()
@@ -131,6 +131,15 @@ minus_button = ttk.Button(button_frame, text="-", width=3, command=font_down)
 minus_button.grid(row=0, column=3, padx=2)
 cs_button = ttk.Button(button_frame2, text="Complete Sentence")
 cs_button.grid(row=0, column = 0)
+
+re_pro = ttk.Checkbutton(text='Professional')
+re_pro.pack(anchor='e')
+
+re_fri = ttk.Checkbutton(text='Informal     ')
+re_fri.pack(anchor='e')
+
+re_button = ttk.Button(text="Rewite...")
+re_button.pack(anchor='e')
 
 cpara_button = ttk.Button(button_frame2, text="Complete Paragraph")
 cpara_button.grid(row=0, column = 1, padx=5)
