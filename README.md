@@ -1,5 +1,5 @@
-uottahack 2026 Project 
-Haytham, Sakriya, Rosesh
+UOttaHack 2026 Project 
+Haytham, Sakriya, Rosesh, Henal
 Jan 17 2026 
 
 Project:
@@ -21,3 +21,7 @@ Think of the possibilities… what will you build with the Google Gemini API thi
 Links:
 
 - https://mlh.link/gemini-quickstart
+
+Credits:
+
+Uses Sun Valley Theme by rdbende: https://github.com/rdbende/Sun-Valley-ttk-theme 
